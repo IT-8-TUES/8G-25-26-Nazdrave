@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FocusFlow - Моите Цели</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/themes.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <h1>FocusFlow</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Начало</a></li>
+                <li><a href="dashboard.html">Табло</a></li>
+                <li><a href="tasks.html">Задачи</a></li>
+                <li><a href="timer.html">Таймер</a></li>
+                <li><a href="goals.html" class="active">Цели</a></li>
+                <li><a href="quotes.html">Цитати</a></li>
+                <li><a href="about.html">За проекта</a></li>
+                <li><a href="contact.html">Контакти</a></li>
+            </ul>
+        </nav>
+        <button id="theme-toggle" onclick="toggleTheme()">Смяна на тема</button>
+    </header>
+
+    <main>
+        <section class="goals-hero">
+            <h2>Постави си цели. Постигай ги ден след ден.</h2>
+            <p>Запиши какво искаш да постигнеш днес и през седмицата. Прогресът се крие в малките стъпки.</p>
+        </section>
+
+        <section class="goals-form-section">
+            <h3>Добави нова цел</h3>
+            <form id="goal-form">
+                <input type="text" id="goalInput" placeholder="Напиши целта си тук..." required>
+                
+                <select id="goalType">
+                    <option value="daily">Дневна цел</option>
+                    <option value="weekly">Седмична цел</option>
+                </select>
+                
+                <button type="submit">Добави</button>
+            </form>
+        </section>
+
+        <section class="goals-container">
+            
+            <article class="goals-category">
+                <h3>Дневни цели</h3>
+                <ul id="dailyGoalsList">
+                    <li>
+                        <label>
+                            <input type="checkbox"> Пиене на 2л вода
+                        </label>
+                        <button class="delete-btn">&times;</button>
+                    </li>
+                </ul>
+            </article>
+
+            <article class="goals-category">
+                <h3>Седмични цели</h3>
+                <ul id="weeklyGoalsList">
+                    <li class="completed">
+                        <label>
+                            <input type="checkbox" checked> Прочитане на 50 страници от книга
+                        </label>
+                        <button class="delete-btn">&times;</button>
+                    </li>
+                </ul>
+            </article>
+
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 FocusFlow. Всички права запазени.</p>
+    </footer>
+
+    <script src="js/theme.js"></script>
+    <script src="js/goals.js"></script>
+</body>
+</html>
