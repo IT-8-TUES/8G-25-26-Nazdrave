@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="bg" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FocusFlow — Задачи</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="themes.css" />
+  <link rel="stylesheet" href="tasks.css" />
+</head>
+<body>
+
+<main>
+  <div class="page-header">
+    <h1>Моите задачи</h1>
+    <div class="stats-row">
+      <div class="stat-pill">Общо: <span id="stat-total">0</span></div>
+      <div class="stat-pill">Завършени: <span id="stat-done">0</span></div>
+      <div class="stat-pill">Останали: <span id="stat-remaining">0</span></div>
+    </div>
+  </div>
+
+  <div class="timer-link-bar">
+    <span>Фокусирай се с <strong>Pomodoro таймера</strong></span>
+    <a href="timer.html" class="btn-go-timer">⏱ Отвори таймера</a>
+  </div>
+
+  <div class="add-task-form">
+    <input type="text" id="task-input" class="task-input" placeholder="Добави нова задача…" maxlength="120" />
+    <select id="priority-select" class="priority-select">
+      <option value="low">🟢 Ниска</option>
+      <option value="medium" selected>🟡 Средна</option>
+      <option value="high">🔴 Висока</option>
+    </select>
+    <button class="btn-add" onclick="addTask()">+ Добави</button>
+  </div>
+
+  <div class="filter-tabs">
+    <button class="tab-btn active" onclick="setFilter('all',this)">Всички</button>
+    <button class="tab-btn" onclick="setFilter('active',this)">Активни</button>
+    <button class="tab-btn" onclick="setFilter('done',this)">Завършени</button>
+    <button class="tab-btn" onclick="setFilter('high',this)">🔴 Висок</button>
+  </div>
+
+  <div class="task-list-wrap">
+    <ul id="task-list"></ul>
+  </div>
+</main>
+
+<script src="tasks.js"></script>
+</body>
+</html>
