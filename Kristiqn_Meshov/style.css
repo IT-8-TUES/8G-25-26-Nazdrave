@@ -1,45 +1,77 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-body{
-    font-family: Arial, sans-serif;
-    background-color: #f4f6fb;
+:root {
+    --primary-color: #4f46e5;
+    --bg-color: #f8fafc;
+    --text-color: #1e293b;
 }
-.top-nav{
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+.navbar {
     display: flex;
     justify-content: space-between;
-    align-items: center;
-
     padding: 20px 10%;
+}
 
-    background-color: white;
-}
-.brand{
-    font-size: 28px;
-    font-weight: bold;
-}
-.brand span{
-    color: #6366f1;
-}
-.menu-links{
+.nav-links {
     display: flex;
     gap: 20px;
-
     list-style: none;
 }
-.menu-links a{
+
+.nav-links a {
     text-decoration: none;
-    color: #374151;
+    color: black;
 }
-.menu-links a.current{
-    color: #6366f1;
-}
-.intro-section{
+
+.hero-section {
     text-align: center;
-    padding-top: 120px;
+    padding: 120px 20px;
 }
-.intro-section h1{
+
+.btn {
+    padding: 12px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: white;
+}
+.dashboard-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 40px 10%;
+}
+
+.card {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+}
+
+.task-input-group {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.task-input-group input {
+    flex: 1;
+    padding: 10px;
+}
+
+.timer-display {
     font-size: 48px;
+    font-weight: bold;
 }
