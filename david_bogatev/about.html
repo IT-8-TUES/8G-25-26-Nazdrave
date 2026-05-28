@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="bg" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FocusFlow — За проекта</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="themes.css" />
+  <link rel="stylesheet" href="tasks.css" />
+  <link rel="stylesheet" href="responsive.css" />
+</head>
+<body>
+
+<nav>
+  <div class="logo">Focus<span>Flow</span></div>
+  <ul class="nav-links">
+    <li><a href="index.html">Начало</a></li>
+    <li><a href="dashboard.html">Табло</a></li>
+    <li><a href="tasks.html">Задачи</a></li>
+    <li><a href="timer.html">Таймер</a></li>
+    <li><a href="goals.html">Цели</a></li>
+    <li><a href="quotes.html">Цитати</a></li>
+    <li><a href="about.html" class="active">За проекта</a></li>
+    <li><a href="contact.html">Контакти</a></li>
+  </ul>
+  <button class="theme-btn" onclick="toggleTheme()">
+    <span id="theme-icon">☀️</span> 
+    <span id="theme-label">Светла</span>
+  </button>
+</nav>
+
+<main>
+  <div class="page-header">
+    <h1>За проекта</h1>
+    <p class="subtitle">FocusFlow — личен productivity dashboard, създаден от ученици от 8Г клас на ТУЕС</p>
+  </div>
+
+  <div class="card">
+    <h2>📌 Какво е FocusFlow?</h2>
+    <p>FocusFlow помага на учениците да организират задачите си, да поставят цели и да работят по-концентрирано с Pomodoro таймер. Всичко работи в браузъра.</p>
+  </div>
+
+  <div class="card">
+    <h2>⚙️ Технологии</h2>
+    <p>Проектът е направен с технологиите, които учихме:</p>
+    <ul style="padding-left: 20px; margin: 12px 0;">
+      <li>HTML5</li>
+      <li>CSS3 + CSS Variables</li>
+      <li>JavaScript</li>
+      <li>LocalStorage</li>
+      <li>Responsive Design</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2>👥 Нашият отбор</h2>
+    <p>
+      <strong>Кристиян Мешов</strong> — index.html, dashboard.html, addtask.js, style.css<br>
+      <strong>Давид Богатев</strong> — about.html, contact.html, light_dark_mode.js, responsive.css<br>
+      <strong>Денислав Георгиев</strong> — goals.html, quotes.html, dashboard.css, pomodoroTaimer.js<br>
+      <strong>Виктор Марков</strong> — tasks.html, tasks.css, themes.css, timer.html, timer.css, timer.js
+    </p>
+  </div>
+
+  <div class="card">
+    <h2>📅 Финален проект</h2>
+    <p>Информационни технологии, 8Г клас, ТУЕС — 2025/2026 учебна година</p>
+  </div>
+</main>
+
+<footer>
+  © 2026 FocusFlow · 8Г, ТУЕС · Всички права запазени
+</footer>
+
+<script src="js/light_dark_mode.js"></script>
+</body>
+</html>
