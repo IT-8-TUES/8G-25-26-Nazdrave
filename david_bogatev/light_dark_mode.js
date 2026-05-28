@@ -7,3 +7,26 @@ function toggleTheme() {
     
     updateThemeButton(next);
 }
+
+function updateThemeButton(theme) {
+    const icon = document.getElementById('theme-icon');
+    const label = document.getElementById('theme-label');
+    
+    if (!icon || !label) return;
+    
+    if (theme === 'dark') {
+        icon.textContent = '☀️';
+        label.textContent = 'Светла';
+    } else {
+        icon.textContent = '🌙';
+        label.textContent = 'Тъмна';
+    }
+}
+
+function loadSavedTheme() {
+    const savedTheme = localStorage.getItem('ff-theme') || 'dark';
+    document.documentElement.setAttribute('data-theme', savedTheme);
+    updateThemeButton(savedTheme);
+}
+
+loadSavedTheme();
