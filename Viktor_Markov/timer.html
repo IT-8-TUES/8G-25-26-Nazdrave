@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="bg" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FocusFlow — Pomodoro Таймер</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="themes.css" />
+  <link rel="stylesheet" href="timer.css" />
+</head>
+<body>
+
+<main>
+  <section>
+    <div class="page-header">
+      <h1>Pomodoro Таймер</h1>
+    </div>
+
+    <div class="mode-tabs">
+      <button class="mode-tab active" data-mode="pomodoro" onclick="switchMode('pomodoro',this)">🍅 Pomodoro</button>
+      <button class="mode-tab" data-mode="short"    onclick="switchMode('short',this)">☕ Кратка пауза</button>
+      <button class="mode-tab" data-mode="long"     onclick="switchMode('long',this)">🛌 Дълга пауза</button>
+    </div>
+
+    <div class="timer-wrap">
+      <div class="timer-ring-wrap">
+        <svg class="timer-svg" width="240" height="240" viewBox="0 0 240 240">
+          <circle class="ring-bg"       cx="120" cy="120" r="108" />
+          <circle class="ring-progress" cx="120" cy="120" r="108" id="ring"
+            stroke-dasharray="678.6" stroke-dashoffset="0" />
+        </svg>
+        <div class="timer-center">
+          <div id="timer-display" onclick="enterEditMode()" title="Кликни за редакция">25:00</div>
+          <div class="timer-mode-label" id="timer-mode-label">Фокус</div>
+          <div class="edit-hint">кликни за редакция</div>
+        </div>
+      </div>
+
+      <div class="timer-controls">
+        <button class="btn-ctrl btn-start" id="btn-start" onclick="toggleTimer()">▶ Старт</button>
+        <button class="btn-ctrl btn-skip"  onclick="skipSession()">⏭ Пропусни</button>
+        <button class="btn-ctrl btn-reset" onclick="resetTimer()">↩ Нулирай</button>
+      </div>
+    </div>
+  </section>
+
+  <aside class="sidebar">
+    <div class="panel">
+      <div class="panel-head">
+        <span class="panel-title">Активна задача</span>
+        <a href="tasks.html" style="font-family:'DM Mono',monospace;font-size:0.68rem;color:var(--accent);text-decoration:none;">+ задачи</a>
+      </div>
+      <div class="panel-body">
+        <div id="active-task-display"></div>
+      </div>
+    </div>
+
+    <div class="panel">
+      <div class="panel-head">
+        <span class="panel-title">Избери задача</span>
+      </div>
+      <div class="panel-body">
+        <div class="task-mini-list" id="task-mini-list"></div>
+      </div>
+    </div>
+
+    <div class="panel">
+      <div class="panel-head">
+        <span class="panel-title">Статистика</span>
+      </div>
+      <div class="panel-body">
+        <div class="stats-grid">
+          <div class="stat-card"><div class="stat-num" id="stat-sessions">0</div><div class="stat-lbl">сесии</div></div>
+          <div class="stat-card"><div class="stat-num" id="stat-minutes">0</div><div class="stat-lbl">минути</div></div>
+          <div class="stat-card"><div class="stat-num" id="stat-tasks-done">0</div><div class="stat-lbl">завършени</div></div>
+          <div class="stat-card"><div class="stat-num" id="stat-streak">0</div><div class="stat-lbl">поред. сесии</div></div>
+        </div>
+      </div>
+    </div>
+  </aside>
+</main>
+
+<script src="timer.js"></script>
+</body>
+</html>
