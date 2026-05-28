@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="bg" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FocusFlow — Контакти</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="themes.css" />
+  <link rel="stylesheet" href="tasks.css" />
+  <link rel="stylesheet" href="responsive.css" />
+</head>
+<body>
+
+<nav>
+  <div class="logo">Focus<span>Flow</span></div>
+  <ul class="nav-links">
+    <li><a href="index.html">Начало</a></li>
+    <li><a href="dashboard.html">Табло</a></li>
+    <li><a href="tasks.html">Задачи</a></li>
+    <li><a href="timer.html">Таймер</a></li>
+    <li><a href="goals.html">Цели</a></li>
+    <li><a href="quotes.html">Цитати</a></li>
+    <li><a href="about.html">За проекта</a></li>
+    <li><a href="contact.html" class="active">Контакти</a></li>
+  </ul>
+  <button class="theme-btn" onclick="toggleTheme()">
+    <span id="theme-icon">☀️</span> 
+    <span id="theme-label">Светла</span>
+  </button>
+</nav>
+
+<main>
+  <div class="page-header">
+    <h1>Контакти</h1>
+    <p class="subtitle">Имаш въпрос, идея или забележка? Пиши ни!</p>
+  </div>
+
+  <div class="card">
+    <form id="contact-form">
+      <div style="margin-bottom: 15px;">
+        <label>Твоето име</label><br>
+        <input type="text" id="name" style="width: 100%; padding: 10px; margin-top: 5px;" required>
+      </div>
+      
+      <div style="margin-bottom: 15px;">
+        <label>Имейл адрес</label><br>
+        <input type="email" id="email" style="width: 100%; padding: 10px; margin-top: 5px;" required>
+      </div>
+      
+      <div style="margin-bottom: 15px;">
+        <label>Съобщение</label><br>
+        <textarea id="message" rows="6" style="width: 100%; padding: 10px; margin-top: 5px;" required></textarea>
+      </div>
+      
+      <button type="submit" class="btn-add" style="width: 100%; padding: 12px;">Изпрати съобщение</button>
+    </form>
+  </div>
+
+  <div class="card">
+    <h2>Други начини за връзка</h2>
+    <p><strong>GitHub:</strong> <a href="https://github.com/IT-8-TUES/8G-25-26-Nazdrave" target="_blank">8G-25-26-Nazdrave</a></p>
+  </div>
+</main>
+
+<footer>
+  © 2026 FocusFlow · 8Г, ТУЕС · Всички права запазени
+</footer>
+
+<script src="js/light_dark_mode.js"></script>
+<script>
+  document.getElementById('contact-form').addEventListener('submit', function(e) {
+    e.preventDefault();
+    alert('✅ Съобщението е изпратено успешно! (Демо версия)');
+    this.reset();
+  });
+</script>
+</body>
+</html>
