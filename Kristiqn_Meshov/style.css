@@ -39,9 +39,9 @@ a:hover { text-decoration: underline; }
     font-family: 'Oswald', 'Arial Narrow', Arial, sans-serif;
     font-size: 1.6rem;
     font-weight: 700;
-    color: var(--accent);
+    color: var(--text-primary);
     letter-spacing: 0.03em;
-    text-transform: uppercase;
+    text-transform: none;
     font-style: italic;
     margin-right: 2.5rem;
 }
