@@ -9,6 +9,22 @@ body {
   flex-direction: column;
 }
 
+nav {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 1.1rem 2rem; border-bottom: 1px solid var(--border);
+  background: var(--bg-secondary); position: sticky; top: 0; z-index: 100;
+}
+.nav-logo { font-size: 1.35rem; font-weight: 800; letter-spacing: -0.5px; color: var(--accent); text-decoration: none; }
+.nav-links { display: flex; gap: 1.6rem; list-style: none; }
+.nav-links a { color: var(--text-secondary); text-decoration: none; font-size: 0.92rem; font-weight: 600; transition: color var(--transition); }
+.nav-links a:hover, .nav-links a.active { color: var(--accent); }
+.theme-btn {
+  background: var(--bg-card); border: 1px solid var(--border); border-radius: 50px;
+  padding: 0.4rem 1rem; cursor: pointer; display: flex; align-items: center; gap: 0.5rem;
+  font-family: 'DM Mono', monospace; font-size: 0.82rem; color: var(--text-secondary);
+}
+.theme-btn:hover { border-color: var(--accent); color: var(--accent); }
+
 main { flex: 1; max-width: 780px; width: 100%; margin: 0 auto; padding: 3rem 1.5rem 2rem; }
 h1 { font-size: 2.2rem; font-weight: 800; letter-spacing: -1px; line-height: 1.1; }
 .page-header { margin-bottom: 2rem; }
