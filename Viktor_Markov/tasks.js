@@ -37,6 +37,23 @@ function initStats() {
   saveStats();
 }
 
+function addTask() {
+  const input = document.getElementById('task-input');
+  const text  = input.value.trim();
+  if (!text) { input.focus(); return; }
+
+  tasks.unshift({
+    id:       Date.now(),
+    text,
+    priority: document.getElementById('priority-select').value,
+    done:     false,
+    created:  new Date().toLocaleTimeString('bg-BG', { hour: '2-digit', minute: '2-digit' }),
+  });
+  stats.total++;
+  saveTasks(); saveStats(); render();
+  input.value = ''; input.focus();
+}
+
 function removeTask(id) {
   const el = document.getElementById('task-' + id);
   if (!el) return;
