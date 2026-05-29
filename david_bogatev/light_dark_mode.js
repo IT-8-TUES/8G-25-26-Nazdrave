@@ -1,5 +1,5 @@
 function toggleTheme() {
-    let current = document.documentElement.getAttribute('data-theme');
+    let current = document.documentElement.getAttribute('data-theme') || 'dark';
     let next = current === 'dark' ? 'light' : 'dark';
     
     document.documentElement.setAttribute('data-theme', next);
@@ -23,10 +23,8 @@ function updateThemeButton(theme) {
     }
 }
 
-function loadSavedTheme() {
+document.addEventListener('DOMContentLoaded', function() {
     const savedTheme = localStorage.getItem('ff-theme') || 'dark';
     document.documentElement.setAttribute('data-theme', savedTheme);
     updateThemeButton(savedTheme);
-}
-
-loadSavedTheme();
+});
