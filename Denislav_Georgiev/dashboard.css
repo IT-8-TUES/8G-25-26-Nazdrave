@@ -8,7 +8,6 @@
     margin: 0 auto;
 }
 
-/ --- Cards --- /
 .card {
     background: var(--bg-card);
     border: 1px solid var(--border);
@@ -17,7 +16,6 @@
     box-shadow: var(--shadow-card);
 }
 
-/ --- Task list --- /
 #task-list {
     list-style: none;
     display: flex;
@@ -39,7 +37,6 @@
     animation: slideIn 0.2s ease;
 }
 
-/ --- Timer --- */
 .timer-display {
     font-size: 52px;
     font-weight: 700;
