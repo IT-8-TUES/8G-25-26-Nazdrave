@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="bg">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FocusFlow - Мотивационни цитати</title>
+    <link rel="stylesheet" href="../Kristiqn_Meshov/style.css">
+    <link rel="stylesheet" href="../Viktor_Markov/themes.css">
+</head>
+
+<body>
+
+
+    <header>
+        <div class="logo">
+            <h1>FocusFlow</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="../Kristiqn_Meshov/index.html">Начало</a></li>
+                <li><a href="../Kristiqn_Meshov/dashboard.html">Табло</a></li>
+                <li><a href="../Viktor_Markov/tasks.html">Задачи</a></li>
+                <li><a href="../Viktor_Markov/timer.html">Таймер</a></li>
+                <li><a href="goals.html">Цели</a></li>
+                <li><a href="quotes.html" class="active">Цитати</a></li>
+                <li><a href="../david_bogatev/about.html">За проекта</a></li>
+                <li><a href="../david_bogatev/contact.html">Контакти</a></li>
+            </ul>
+        </nav>
+        <button id="theme-toggle" onclick="toggleTheme()">Смяна на тема</button>
+    </header>
+
+    <main>
+        <section class="quotes-hero">
+            <h2>Вдъхновение за деня</h2>
+            <p>Една добра мисъл може да промени целия ти работен процес.</p>
+        </section>
+
+        <section class="daily-quote-section">
+            <figure class="featured-quote">
+                <blockquote id="currentQuote">
+                    "Успехът не е краен, провалът не е фатален: важно е мъжеството да продължиш."
+                </blockquote>
+                <figcaption id="quoteAuthor"><cite>— Уинстън Чърчил</cite></figcaption>
+            </figure>
+            <button id="newQuoteBtn">Покажи нов цитат</button>
+        </section>
+
+        <section class="add-quote-section">
+            <h3>Добави твой любим цитат</h3>
+            <form id="quote-form">
+                <input type="text" id="quoteText" placeholder="Напиши цитата тук..." required>
+                <input type="text" id="quoteAuthorInput" placeholder="Автор (по желание)">
+                <button type="submit">Запази</button>
+            </form>
+        </section>
+
+        <section class="saved-quotes-container">
+            <h3>Моите запазени цитати</h3>
+            <ul id="savedQuotesList">
+                <li>
+                    <blockquote>"Бъдещето принадлежи на тези, които вярват в красотата на своите мечти."</blockquote>
+                    <cite>— Елинор Рузвелт</cite>
+                    <button class="delete-btn">&times;</button>
+                </li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 FocusFlow.</p>
+    </footer>
+
+    <script src="../david_bogatev/light_dark_mode.js"></script>
+    <script src="quotes.js"></script>
+</body>
+
+</html>
