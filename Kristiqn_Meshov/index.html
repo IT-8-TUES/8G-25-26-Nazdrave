@@ -8,25 +8,26 @@
     <link rel="stylesheet" href="../Viktor_Markov/themes.css">
 </head>
 <body>
-    <header>
-    <div class="logo">Focus<span>Flow</span></div>
+
+<header>
     <nav class="navbar">
-                <ul>
-                <li><a href="index.html">Начало</a></li>
-                <li><a href="dashboard.html">Табло</a></li>
-                <li><a href="../Viktor_Markov/tasks.html">Задачи</a></li>
-                <li><a href="../Viktor_Markov/timer.html">Таймер</a></li>
-                <li><a href="../Denislav_Georgiev/goals.html">Цели</a></li>
-                <li><a href="../Denislav_Georgiev/quotes.html"class="active">Цитати</a></li>
-                <li><a href="../david_bogatev/about.html">За проекта</a></li>
-                <li><a href="../david_bogatev/contact.html">Контакти</a></li>
-            </ul>
-        
+        <div class="logo">Focus<span>Flow</span></div>
 
         <ul class="nav-links">
             <li><a href="index.html" class="active">Начало</a></li>
-            <li><a href="dashboard.html">Дашборд</a></li>
+            <li><a href="dashboard.html">Табло</a></li>
+            <li><a href="../Viktor_Markov/tasks.html">Задачи</a></li>
+            <li><a href="../Viktor_Markov/timer.html">Таймер</a></li>
+            <li><a href="../Denislav_Georgiev/goals.html">Цели</a></li>
+            <li><a href="../Denislav_Georgiev/quotes.html">Цитати</a></li>
+            <li><a href="../david_bogatev/about.html">За проекта</a></li>
+            <li><a href="../david_bogatev/contact.html">Контакти</a></li>
         </ul>
+
+        <button id="theme-toggle" onclick="toggleTheme()">
+            <span id="theme-icon">☀️</span>
+            <span id="theme-label">Светла</span>
+        </button>
     </nav>
 </header>
 
@@ -34,17 +35,12 @@
     <section class="hero-section">
         <div class="hero-content">
             <h1>Овладей времето си</h1>
-
-            <p>
-                Productivity dashboard за задачи и таймери.
-            </p>
-
-            <a href="dashboard.html" class="btn btn-primary">
-                Към Дашборда
-            </a>
+            <p>Productivity dashboard за задачи и таймери.</p>
+            <a href="dashboard.html" class="btn btn-primary">Към Дашборда</a>
         </div>
     </section>
 </main>
 
+<script src="../Viktor_Markov/theme.js"></script>
 </body>
-</html> 
+</html>
